@@ -6,7 +6,9 @@ We are going to use Amazon Linux 2.
 
 
 ### See which packages are available in your repos, just for info
+```
 yum search tomcat
+```
 
 ### Install tomcat and tomcat-admin-webapps
 tomcat-admin-webapp (usually called manager) is a separate package that you have to install along with tomcat if you need a nice GUI to manage tomcat and deploy apps via GUI.
@@ -24,7 +26,7 @@ By default the manager webapp is restricted to the host in which tomcat is insta
 sudo nano /usr/share/tomcat/webapps/manager/META-INF/context.xml
 ```
 
-Add the following line inside the <context> tag:
+Add the following line inside the `<context>` tag:
 ```
 <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" />
 ```
@@ -35,7 +37,7 @@ By default no users are created for the tomcat. Lets create an admin user:
 sudo nano /usr/share/tomcat/conf/tomcat-users.xml
 ```
 
-Add the following lines inside <tomcat-users> tag:
+Add the following lines inside `<tomcat-users>` tag:
 ```
 <role rolename="admin"/> 
 <role rolename="admin-gui"/> 
@@ -49,7 +51,7 @@ Add the following lines inside <tomcat-users> tag:
 ```
 
 ### Open ports in firewall
-In the security group of ec2 make sure you open port 8080.
+In the security group of your ec2 instance make sure you open port 8080.
 
 ### To start Tomcat
 ```
@@ -78,10 +80,13 @@ Login with the credentials given when you created the admin user
 ```
 sudo systemctl stop tomcat.service
 ```
-
-
-
-
+\
+\
+\
+\
+\
+\
+\ 
 # Commands you may find useful in debugging issues related to installation
 
 To check if java has been installed or to find out the version of java installed:
