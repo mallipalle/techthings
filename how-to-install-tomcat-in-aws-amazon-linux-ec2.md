@@ -80,13 +80,11 @@ Login with the credentials given when you created the admin user
 ```
 sudo systemctl stop tomcat.service
 ```
-\
-\
-\
-\
-\
-\
-\ 
+<br/>
+<br/>
+<br/>
+<br/>
+
 # Commands you may find useful in debugging issues related to installation
 
 To check if java has been installed or to find out the version of java installed:
@@ -115,7 +113,8 @@ sudo netstat -nlp | grep <PID>
 ```
 
 To find the command that started a process
-```ps aux |grep <PID>
+```
+ps aux |grep <PID>
 ```
 OR
 ```
